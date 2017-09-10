@@ -1,0 +1,553 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "variables";
+@import "mixins";
+
+$break-small: 375px;
+$break-medium: 720px;
+$break-large: 1024px;
+
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Myriad Pro",sans-serif;
+}
+li{
+  list-style: none;
+}
+header {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  padding-top: 2%;
+  z-index: 10;
+  @media screen and (max-width: $break-small) {
+    height: 5%;
+    padding-top: 1%;
+  }
+  ul {
+    li {
+      float: left;
+      a {
+        text-decoration:none;
+      }
+    }
+    li:first-child {
+      margin-left: 150px;
+      @media screen and (max-width: $break-small) {
+        margin-left: 25px;
+      }
+      .logo {
+        margin-top: 16%;
+        @media screen and (max-width: $break-small) {
+          margin-top: 2%;
+        }
+        span.logo-label {
+            text-transform: uppercase;
+        }
+      }
+      span.circle {
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          background: transparent;
+          border: 2px solid #ff343d;
+          border-radius: 50%;
+          margin-left: 8px;
+          margin-bottom: 10px;
+      }
+    }
+    li:nth-child(2) {
+      color: #98a6aa;
+      margin-left: 60px;
+      margin-top: 1%;
+      @media screen and (max-width: $break-small) {
+        margin-left: 20px;
+      }
+    }
+    li:nth-child(3) {
+      float: right;
+      margin-right: 100px;
+      margin-top: 1%;
+      color: #FFF;
+      @media screen and (max-width: $break-small) {
+        margin-right: -33px;
+      }
+      .menu {
+        float: right;
+        margin-left: 40px;
+        margin-top: 1%;
+        span {
+          display: block;
+          width: 30px;
+          height: 3px;
+          margin-bottom: 4px;
+          background: #FFF;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}
+.landing {
+  height: 100%;
+  #left-grey {
+    width: 60%;
+    height: 100%;
+    float: left;
+    background-color: #eff2f6;
+    @media screen and (max-width: $break-small) {
+      width: 60%;
+    }
+    .slider.slick-initialized.slick-slider.slick-dotted.slick-vertical {
+      position: relative;
+      top: 40%;
+      left: 10%;
+      @media screen and (max-width: $break-small) {
+        top: 60%;
+      }
+      ul.slick-dots {
+          transform: rotate(90deg);
+          position: absolute;
+          right: 55%;
+          bottom: 34%;
+      }
+      .slick-dots li button:before {
+        font-size: 20px;
+        line-height: 20px;
+      }
+      p {
+        color: #000;
+        font-size: 20px;
+        font-weight: lighter;
+        text-align: left;
+        span {
+          margin: 0;
+          padding: 0;
+          color: #92a1a5;
+          font-size: 10px;
+        }
+      }
+     }
+    }
+  #center {
+    z-index: 8;
+    top: 50%;
+    left: 60%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    background-color: #FFFFFF;
+    @media screen and (max-width: $break-small) {
+      width: 130px;
+      height: 130px;
+    }
+    img {
+      width: 650px;
+      position: absolute;
+      top: 5%;
+      right: -30%;
+      @media screen and (max-width: $break-small) {
+        width: 200px;
+      }
+    }
+  }
+  #right-red{
+    float: left;
+    background-color: #ff343d;
+    width: 40%;
+    height: 100%;
+    @media screen and (max-width: $break-small) {
+      width: 40%;
+    }
+    span {
+      display: block;
+      color: #ff343d;
+      text-transform: uppercase;
+      font-size: 17em;
+      text-shadow: 0 0 40px rgba(0,0,0,0.2);
+      transform: rotate(90deg);
+      position: absolute;
+      top: 210px;
+      right: -150px;
+      @media screen and (max-width: $break-small) {
+        font-size: 10em;
+      }
+    }
+  }
+}
+.second{
+  height: 50%;
+  #left{
+    width: 30%;
+    height: 100%;
+    float: left;
+    background: url('../img/section2-drone.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media screen and (max-width: $break-large) {
+      width: 100%;
+    }
+    p {
+      margin-top: 150px;
+      text-align: center;
+      font-size: 40px;
+      span {
+        margin: 0;
+        padding: 0;
+        color: #92a1a5;
+        font-size: 10px;
+      }
+    }
+  }
+  #center{
+    left: 30%;
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    @media screen and (max-width: $break-medium) {
+      position: relative;
+      left: 0;
+      top: 100%;
+      width: 50%;
+      height: 100%;
+    }
+    @media screen and (max-width: $break-large) {
+      height: 50%;
+      width: 40%;
+      top: 150%;
+      left: 0;
+    }
+    p{
+     color: #FFFFFF;
+     font-size: 40px;
+     text-align: left;
+     margin-left: 10%;
+     margin-top: 150px;
+     margin-bottom: auto;
+     @media screen and (max-width: $break-medium) {
+       position: relative;
+       font-size: 18px;
+     }
+     @media screen and (max-width: $break-large) {
+       margin-top: 50;
+     }
+   }
+  }
+  #right{
+    width: 70%;
+    height: 100%;
+    float: left;
+    background: url('../img/section2.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media screen and (max-width: $break-large) {
+      width: 100%;
+    }
+    .btn-more {
+      width: 100px;
+      float: right;
+      margin-top: 18%;
+      margin-right: 12%;
+      border-radius: 25px;
+      padding: 8px;
+      background-color: #FFF;
+      color: #000;
+      transform: rotate(-90deg);
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+}
+.third{
+  height: 50%;
+  width: 100%;
+  background-color: #FFF;
+  h1{
+    text-align: center;
+    margin-top: 60px;
+  }
+  ul {
+    padding-left: 100px;
+    padding-right: 220px;
+    padding-top: 60px;
+    @media screen and (max-width: $break-medium) {
+      padding-left: 0;
+      float: right;
+      padding-right: 133px;
+    }
+    li {
+      float: left;
+      width: 100px;
+      margin-left: 180px;
+      @media screen and (max-width: $break-large) {
+        margin-left: 76px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+      span {
+        text-align: center;
+        display: block;
+        margin-top: 50px;
+        @media screen and (max-width: $break-medium) {
+          margin-top: 20px;
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}
+
+.fourth{
+  height: 60%;
+  @media screen and (max-width: $break-medium) {
+    height: 40%;
+  }
+  #left{
+    width: 45%;
+    height: 100%;
+    float: left;
+    background: url('../img/manette.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media screen and (max-width: $break-large) {
+      width: 100%;
+    }
+    p {
+      margin-top: 150px;
+      text-align: center;
+      font-size: 40px;
+      span {
+        margin: 0;
+        padding: 0;
+        color: #92a1a5;
+        font-size: 10px;
+      }
+    }
+  }
+  #right{
+    width: 55%;
+    height: 100%;
+    float: left;
+    background: url('../img/section4-drone.png') no-repeat;
+    background-position: right;
+    background-size: contain;
+    background-color: #232323;
+    @media screen and (max-width: $break-large) {
+      width: 100%;
+    }
+    p {
+      margin-left: 70px;
+      margin-top: 120px;
+      color: #FFF;
+      font-size: 65px;
+      @media screen and (max-width: $break-medium) {
+        font-size: 40px;
+        margin-left: 40px;
+      }
+      span {
+        color: #ff343d;
+      }
+    }
+    .btn-more {
+      width: 100px;
+      margin-top: 10px;
+      margin-left: 70px;
+      border-radius: 25px;
+      padding: 8px;
+      border: solid 1px #eff2f6;
+      color: #FFF;
+      font-size: 12px;
+      text-align: center;
+      @media screen and (max-width: $break-medium) {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+.fifth {
+  height: 100%;
+  width: 100%;
+  @media screen and (max-width: $break-large) {
+    height: 150%;
+  }
+  @media screen and (max-width: $break-medium) {
+    height: 150%;
+  }
+  @media screen and (max-width: $break-small) {
+    height: 200%;
+  }
+  p {
+    float: left;
+    margin-left: 100px;
+    margin-top: 300px;
+    color: #000;
+    font-size: 75px;
+    @media screen and (max-width: $break-large) {
+      font-size: 45px;
+      margin-left: 50px;
+      margin-top: 200px;
+    }
+    @media screen and (max-width: $break-medium) {
+      font-size: 25px;
+      margin-top: 200px;
+    }
+    @media screen and (max-width: $break-small) {
+      margin-top: 50px;
+      margin-left: 25px;
+    }
+    span {
+      color: #ff343d;
+    }
+  }
+  .btn-product {
+    width: 150px;
+    margin-left: 100px;
+    margin-top: 80px;
+    border: solid 2px #eff2f6;
+    border-radius: 25px;
+    padding: 8px;
+    text-align: center;
+    @media screen and (max-width: $break-large) {
+      width: 15%;
+      font-size: 12px;
+      padding: 4px;
+      margin-left: 50px;
+      margin-top: 100px;
+    }
+    @media screen and (max-width: $break-medium) {
+      width: 15%;
+      font-size: 12px;
+      padding: 4px;
+      margin-left: 50px;
+    }
+    @media screen and (max-width: $break-small) {
+      margin-top: 120px;
+      font-size: 8px;
+      width: 80px;
+      margin-left: 25px;
+    }
+  }
+  img {
+    width: 800px;
+    position: relative;
+    top: 150px;
+    right: -100px;
+    @media screen and (max-width: $break-large) {
+      width: 40%;
+      top: 150px;
+      right: -300px;
+    }
+    @media screen and (max-width: $break-medium) {
+      width: 80%;
+      right: -200px;
+    }
+    @media screen and (max-width: $break-small) {
+      right: -225px;
+    }
+  }
+}
+.sixth{
+  width: 100%;
+  height: 100%;
+  background: url('../img/bateau.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media screen and (max-width: $break-medium) {
+    height: 50%;
+  }
+  @media screen and (max-width: $break-small) {
+    height: 70%;
+  }
+  h1 {
+    text-align: center;
+    color: #FFF;
+    font-weight: 100;
+    font-size: 50px;
+    position: relative;
+    top:70%;
+    @media screen and (max-width: $break-large) {
+      top: 55%;
+    }
+    @media screen and (max-width: $break-small) {
+      top: 65%;
+      font-size: 30px;
+    }
+  }
+  .btn-more {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 42%;
+    border-radius: 25px;
+    padding: 8px;
+    background-color: #FFF;
+    color: #318f76;
+    font-size: 12px;
+    text-align: center;
+    @media screen and (max-width: $break-large) {
+      margin-top: 45%;
+    }
+    @media screen and (max-width: $break-small) {
+      margin-top: 85%;
+    }
+  }
+}
+.seventh {
+  width: 100%;
+  height: 50%;
+  h2 {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        font-size: 10em;
+        font-weight: 400;
+        margin: 0;
+        color: #FFF;
+        top: 50%;
+        transform: translateY(-50%);
+        text-transform: uppercase;
+    }
+    .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 100;
+        span.logo-label {
+            text-transform: uppercase;
+        }
+        span.circle {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: transparent;
+            border: 2px solid #ff343d;
+            border-radius: 50%;
+            margin-left: 8px;
+            margin-bottom: 10px;
+        }
+        span.copyright {
+            display: block;
+            font-size: 0.8em;
+            color: #99a7ab;
+            margin-top: 20px;
+        }
+    }
+}

@@ -294,7 +294,8 @@ header {
       width: 100px;
       margin-left: 180px;
       @media screen and (max-width: $break-large) {
-        margin-left: 76px;
+        margin-left: 75px;
+        margin-bottom: 30px;
       }
       img {
         display: block;
@@ -381,7 +382,7 @@ header {
   }
 }
 .fifth {
-  height: 100%;
+  height: 80%;
   width: 100%;
   @media screen and (max-width: $break-large) {
     height: 150%;
@@ -395,7 +396,7 @@ header {
   p {
     float: left;
     margin-left: 100px;
-    margin-top: 300px;
+    margin-top: 200px;
     color: #000;
     font-size: 75px;
     @media screen and (max-width: $break-large) {
@@ -444,27 +445,27 @@ header {
     }
   }
   img {
-    width: 800px;
+    width: 600px;
     position: relative;
-    top: 150px;
-    right: -100px;
+    top: 200px;
+    right: -205px;
     @media screen and (max-width: $break-large) {
       width: 40%;
       top: 150px;
-      right: -300px;
+      right: -245px;
     }
     @media screen and (max-width: $break-medium) {
       width: 80%;
-      right: -200px;
+      right: -100px;
     }
     @media screen and (max-width: $break-small) {
-      right: -225px;
+      right: -105px;
     }
   }
 }
 .sixth{
   width: 100%;
-  height: 100%;
+  height: 90%;
   background: url('../img/bateau.jpg') no-repeat;
   background-position: center;
   background-size: cover;
@@ -480,7 +481,7 @@ header {
     font-weight: 100;
     font-size: 50px;
     position: relative;
-    top:70%;
+    top:65%;
     @media screen and (max-width: $break-large) {
       top: 55%;
     }
@@ -490,15 +491,15 @@ header {
     }
   }
   .btn-more {
-    width: 100px;
+    width: 150px;
     display: block;
     margin: 0 auto;
-    margin-top: 42%;
+    margin-top: 35%;
     border-radius: 25px;
-    padding: 8px;
+    padding: 10px;
     background-color: #FFF;
     color: #318f76;
-    font-size: 12px;
+    font-size: 15px;
     text-align: center;
     @media screen and (max-width: $break-large) {
       margin-top: 45%;

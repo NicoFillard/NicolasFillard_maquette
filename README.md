@@ -1,0 +1,1 @@
+Pour compiler le css : se mettre à la racine du projet et utiliser la commande "compass watch"
